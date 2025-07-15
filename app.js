@@ -8,3 +8,9 @@ app.get("/", function(req, res) {
     res.send(data)
   })
 })
+
+app.get("/e", function(req, res) {
+  fs.readFile("/index.html", function(er, data) {
+    res.send(data)
+  })
+})
