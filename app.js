@@ -11,6 +11,7 @@ app.get("/", function(req, res) {
     })
   }
   catch {
+    console.log("Err")
     res.send("No")
   }
 })
@@ -19,6 +20,12 @@ app.get("/e", function(req, res) {
   fs.readFile("index.html", function(er, data) {
     res.send(data)
   })
+  
 })
 
-app.listen(443)
+app.listen(443, function () {
+  console.log("Listening")
+}
+  );
+  
+
