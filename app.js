@@ -5,6 +5,7 @@ const app = express()
 
 app.get("/", function(req, res) {
   try {
+    res.setHeader("Content-Type", "text/html")
     fs.readFile("index.html", function(er, data) {
       res.send(data)
     })
