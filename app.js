@@ -14,3 +14,5 @@ app.get("/e", function(req, res) {
     res.send(data)
   })
 })
+
+app.listen(5000)
